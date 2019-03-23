@@ -1,0 +1,9 @@
+Add	$t0, $gp, $zero     
+Lw	$t1, 4($gp)
+Label1: Sll	$t1, $t1, 2
+Add	$t1, $t1, $gp
+Ori	$t2, $zero, 256 
+Top: 	Beq    $t3 $zero Label1
+Sw     $t2 28($t0)      
+Addi   $t0, $t0, 4     
+J      Top         
